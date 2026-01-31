@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    /* General Reset */
+    /* ===== Reset & Base ===== */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -16,7 +16,7 @@
 
     body {
       min-height: 100vh;
-      color: #ffffff;
+      color: #fff;
       background: linear-gradient(-45deg, #0f1015, #1b1c25, #151620, #1e1f29);
       background-size: 400% 400%;
       animation: bgMove 20s ease infinite;
@@ -48,7 +48,7 @@
       font-size: 1.1rem;
     }
 
-    /* Staff Container */
+    /* ===== Staff Container ===== */
     .staff-container {
       max-width: 1200px;
       margin: auto;
@@ -72,7 +72,7 @@
       z-index: 1;
     }
 
-    /* Card */
+    /* ===== Staff Card ===== */
     .staff-card {
       background: linear-gradient(180deg, #1b1c25, #151620);
       border-radius: 16px;
@@ -86,7 +86,6 @@
 
     .staff-card:hover {
       transform: translateY(-10px) scale(1.02);
-      box-shadow: 0 25px 60px rgba(88, 101, 242, 0.35);
     }
 
     /* Glow behind card */
@@ -105,7 +104,7 @@
       opacity: 1;
     }
 
-    /* Avatar / Name / Role / Badge */
+    /* ===== Avatar / Name / Role / Badge ===== */
     .avatar {
       width: 100px;
       height: 100px;
@@ -146,7 +145,7 @@
       z-index: 1;
     }
 
-    /* Floating DNS Text */
+    /* ===== Floating DNS Text ===== */
     .dns-float {
       position: fixed;
       font-family: "Brush Script MT", "Segoe Script", cursive;
@@ -164,6 +163,7 @@
       80% { opacity: 1; }
       100% { opacity: 0; transform: translateY(-40px) scale(1.05); }
     }
+
   </style>
 </head>
 
@@ -176,7 +176,6 @@
 
 <section class="staff-container">
 
-  <!-- Staff 1 -->
   <div class="staff-wrapper">
     <a class="staff-link" href="https://discord.com/users/1236801401061900288" target="_blank" rel="noopener">
       <div class="staff-card">
@@ -189,7 +188,6 @@
     <div class="staff-glow"></div>
   </div>
 
-  <!-- Staff 2 -->
   <div class="staff-wrapper">
     <a class="staff-link" href="https://discord.com/users/1446143206273187924" target="_blank" rel="noopener">
       <div class="staff-card">
@@ -202,7 +200,6 @@
     <div class="staff-glow"></div>
   </div>
 
-  <!-- Staff 3 -->
   <div class="staff-wrapper">
     <a class="staff-link" href="https://discord.com/users/1334644917221457981" target="_blank" rel="noopener">
       <div class="staff-card">
@@ -215,7 +212,6 @@
     <div class="staff-glow"></div>
   </div>
 
-  <!-- Staff 4 -->
   <div class="staff-wrapper">
     <a class="staff-link" href="https://discord.com/users/1306735634001428501" target="_blank" rel="noopener">
       <div class="staff-card">
