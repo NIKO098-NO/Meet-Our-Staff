@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Meet Our Staff</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", system-ui, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      color: #ffffff;
+      background: linear-gradient(-45deg, #0f1015, #1b1c25, #151620, #1e1f29);
+      background-size: 400% 400%;
+      animation: bgMove 20s ease infinite;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    @keyframes bgMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Floating DNS text */
+    .dns-float {
+      position: fixed;
+      font-family: "Brush Script MT", "Segoe Script", cursive;
+      font-size: 3rem;
+      color: rgba(255, 255, 255, 0.08);
+      pointer-events: none;
+      animation: dnsFloat 6s ease forwards;
+      z-index: 0;
+      user-select: none;
+    }
+
+    @keyframes dnsFloat {
+      0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+      }
+      20% {
+        opacity: 1;
+      }
+      80% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-40px) scale(1.05);
+      }
+    }
+
+    header {
+      text-align: center;
+      padding: 80px 20px 40px;
+      position: relative;
+      z-index: 1;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    header p {
+      margin-top: 10px;
+      color: #b5b7c2;
+      font-size: 1.1rem;
+    }
+
+    .staff-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px 80px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .staff-link {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .staff-card {
+      background: linear-gradient(180deg, #1b1c25, #151620);
+      border-radius: 16px;
+      padding: 30px;
+      text-align: center;
+      position: relative;
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+      cursor: pointer;
+      z-index: 1;
+      overflow: visible; /* allow glow behind */
+    }
+
+    /* Glow behind the card */
+    .staff-card::after {
+      content: "";
+      position: absolute;
+      inset: -12px;
+      background: radial-gradient(circle at center, rgba(88,101,242,0.35), transparent 70%);
+      opacity: 0;
+      transition: opacity 0.35s ease;
+      z-index: -1;
+      border-radius: 20px;
+      filter: blur(14px);
+    }
+
+    .staff-card:hover::after {
+      opacity: 1;
+    }
+
+    .staff-card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 25px 60px rgba(88, 101, 242, 0.35);
+    }
+
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #5865f2;
+      margin-bottom: 15px;
+    }
+
+    .name {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    .role {
+      margin-top: 6px;
+      font-size: 0.95rem;
+      color: #aab0ff;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(88, 101, 242, 0.15);
+      border: 1px solid rgba(88, 101, 242, 0.4);
+      font-size: 0.8rem;
+      color: #cfd3ff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 0.85rem;
+      color: #777;
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Meet Our Staff</h1>
+  <p>The team keeping everything running smoothly</p>
+</header>
+
+<section class="staff-container">
+
+  <a class="staff-link" href="https://discord.com/users/1236801401061900288" target="_blank" rel="noopener">
+    <div class="staff-card">
+      <img class="avatar" src="https://cdn.discordapp.com/avatars/1236801401061900288/e42258abca8185e1f0f87196e4823fc9.png?size=1024">
+      <div class="name">Zach</div>
+      <div class="role">Founder</div>
+      <div class="badge">Leadership</div>
+    </div>
+  </a>
+
+  <a class="staff-link" href="https://discord.com/users/1446143206273187924" target="_blank" rel="noopener">
+    <div class="staff-card">
+      <img class="avatar" src="https://cdn.discordapp.com/avatars/1446143206273187924/77e30607d2eaaddf7ff5c7907a888fc6.png?size=1024">
+      <div class="name">Joey</div>
+      <div class="role">Founder</div>
+      <div class="badge">Leadership</div>
+    </div>
+  </a>
+
+  <a class="staff-link" href="https://discord.com/users/1334644917221457981" target="_blank" rel="noopener">
+    <div class="staff-card">
+      <img class="avatar" src="https://cdn.discordapp.com/avatars/1334644917221457981/e727ae2f8d5d10faf5112228b3d17815.png?size=1024">
+      <div class="name">Fakeo</div>
+      <div class="role">Director</div>
+      <div class="badge">Management</div>
+    </div>
+  </a>
+
+  <a class="staff-link" href="https://discord.com/users/1306735634001428501" target="_blank" rel="noopener">
+    <div class="staff-card">
+      <img class="avatar" src="https://cdn.discordapp.com/avatars/1306735634001428501/a1086de1956b4f981f2b5f88047b8e92.png?size=1024">
+      <div class="name">Emmit</div>
+      <div class="role">Director</div>
+      <div class="badge">Management</div>
+    </div>
+  </a>
+
+</section>
+
+<footer>
+  © 2026 Diamond Nations Studio • All Rights Reserved
+</footer>
+
+<script>
+  function spawnDNS() {
+    const dns = document.createElement("div");
+    dns.className = "dns-float";
+    dns.textContent = "DNS";
+
+    const x = Math.random() * 80 + 5;
+    const y = Math.random() * 60 + 10;
+
+    dns.style.left = x + "vw";
+    dns.style.top = y + "vh";
+
+    document.body.appendChild(dns);
+
+    setTimeout(() => {
+      dns.remove();
+    }, 6000);
+  }
+
+  // Spawn once on load
+  spawnDNS();
+
+  // Then every 10 seconds
+  setInterval(spawnDNS, 10000);
+</script>
+
+</body>
+</html>
